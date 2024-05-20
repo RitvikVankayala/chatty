@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Picker from "emoji-picker-react";
+// import Picker from "emoji-mart";
+// import EmojiPicker from "emoji-picker-react";
+// import "emoji-mart/css/emoji-mart.css";
 import { IoMdSend } from "react-icons/io";
 import { BsEmojiSmileFill } from "react-icons/bs";
 
@@ -10,11 +13,18 @@ export default function Chatinput({ handleSendMsg }) {
   const handleEmojiPickerhideShow = () => {
     setShowEmojiPicker(!showEmojiPicker);
   };
-
+  const [selectedEmoji, setSelectedEmoji] = useState(null);
   const handleEmojiClick = (event, emoji) => {
+    // console.log(emoji);
+    // setSelectedEmoji(emoji);
     let message = msg;
-    message += emoji.emoji;
+    // message += selectedEmoji.naive;
+    console.log(event.emoji);
+    message += event.emoji;
+    // console.log(emoji.emoji);
+    // console.log("dtgeerr");
     console.log(message);
+    // console.log("dtgeerr");
     setMsg(message);
   };
 
@@ -65,7 +75,7 @@ const Container = styled.div`
     gap: 1rem;
     .emoji {
       position: relative;
-      z-index: 1;
+      // z-index: 1;
       svg {
         font-size: 1.5rem;
         color: #ffff00c8;
@@ -141,5 +151,8 @@ const Container = styled.div`
         color: white;
       }
     }
+  }
+  aside.EmojiPickerReact.epr-main {
+    top: -500px;
   }
 `;
