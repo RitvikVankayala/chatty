@@ -17,6 +17,7 @@ require("dotenv").config();
 const path = require("path");
 
 const morgan = require("morgan");
+const { start } = require("repl");
 
 app.use(cors());
 // app.use(cors(corsOptions));
@@ -70,3 +71,10 @@ io.on("connection", (socket) => {
     }
   });
 });
+
+// First move to client and do npm start
+// then move to the Myapp and do the npm run dev
+// if not done properly then swaap commands
+
+// for building npm run build /npm build in the client part
+// deployement done but not working
