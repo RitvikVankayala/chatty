@@ -11,7 +11,7 @@
 
 ## 📍 Overview
 
-_I AM BESIDE YOU_ one-to-one chat application is a real-time messaging platform built using popular web development technologies - MongoDB, Express.js, React.js, and Node.js. This type of application allows users to engage in private conversations with one another, making it suitable for a wide range of use cases, from personal messaging to business communication.
+Chatty is an one-to-one chat application is a real-time messaging platform built using popular web development technologies - MongoDB, Express.js, React.js, and Node.js. This type of application allows users to engage in private conversations with one another, making it suitable for a wide range of use cases, from personal messaging to business communication.
 
 ---
 
@@ -34,8 +34,6 @@ _I AM BESIDE YOU_ one-to-one chat application is a real-time messaging platform 
 
 ![](/images/Screenshot_3.png)
 
-![](/images/Screenshot_4.png)
-
 ## 🛠 Installation
 
 ### Requirements
@@ -50,7 +48,7 @@ Both should be installed and make sure mongodb is running.
 Open the terminal and run the following command
 
 ```bash
-git clone https://github.com/vashi001/I_IAM_BESIDE_YOU_IIT_DHANBAD_PELAPUDI_VASHISHTA
+git clone https://github.com/RitvikVankayala/chatty.git
 ```
 
 ### 2. Install package dependencies
