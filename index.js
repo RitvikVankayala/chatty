@@ -8,8 +8,9 @@ const app = express();
 require("dotenv").config();
 
 const corsOptions = {
-  origin: ["https://chattyapp-7e4c.onrender.com", "http://localhost:5000"], // Replace with your frontend domain
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  // origin: ["https://chattyapp-7e4c.onrender.com", "http://localhost:5000"], // Replace with your frontend domain
+  origin: "https://chattyapp-7e4c.onrender.com",
+  methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
   credentials: true, // if you need to send cookies or auth headers
 };
 
