@@ -7,11 +7,18 @@ const socket = require("socket.io");
 const app = express();
 require("dotenv").config();
 
+const corsOptions = {
+  origin: "https://chattyapp-7e4c.onrender.com", // Replace with your frontend domain
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true, // if you need to send cookies or auth headers
+};
+
 const path = require("path");
 
 const morgan = require("morgan");
 
-app.use(cors());
+// app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan("dev"));
 
