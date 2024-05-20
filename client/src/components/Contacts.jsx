@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Logo from '../assets/logo.svg';
+import React, { useState, useEffect } from "react";
+import Logo from "../assets/logo.svg";
 import styled from "styled-components";
 export default function Contacts({ contacts, currentUser, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -23,22 +23,22 @@ export default function Contacts({ contacts, currentUser, changeChat }) {
     setCurrentSelected(index);
     changeChat(contact);
   };
-  return <>
-    {
-      currentUserImage && currentUserName &&
-      (
+  return (
+    <>
+      {currentUserImage && currentUserName && (
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h3 className='he'>i am beside you</h3>
+            <h3 className="he">Chatty</h3>
           </div>
           <div className="contacts">
             {contacts.map((Contact, index) => {
               return (
                 <div
                   key={index}
-                  className={`contact ${index === currentSelected ? "selected" : ""
-                    }`}
+                  className={`contact ${
+                    index === currentSelected ? "selected" : ""
+                  }`}
                   onClick={() => changeCurrentChat(index, Contact)}
                 >
                   <div className="avatar">
@@ -48,7 +48,7 @@ export default function Contacts({ contacts, currentUser, changeChat }) {
                     />
                   </div>
                   <div className="username">
-                    <h3 className='yo'>{Contact.Username}</h3>
+                    <h3 className="yo">{Contact.Username}</h3>
                   </div>
                 </div>
               );
@@ -66,14 +66,13 @@ export default function Contacts({ contacts, currentUser, changeChat }) {
             </div>
           </div>
         </Container>
-      )
-    }
-  </>;
-
+      )}
+    </>
+  );
 }
 
 const Container = styled.div`
-display: grid;
+  display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
   background-color: #080420;
@@ -84,13 +83,13 @@ display: grid;
     justify-content: center;
     img {
       height: 3rem;
-      padding-left:0px;
+      padding-left: 0px;
     }
     h3 {
       color: white;
       text-transform: uppercase;
-      font-size:25px;
-      padding-right:10px;
+      font-size: 25px;
+      padding-right: 10px;
     }
   }
   .contacts {
@@ -144,14 +143,14 @@ display: grid;
       img {
         height: 3.3rem;
         max-inline-size: 100%;
-        padding-left:10px;
-        padding-right:0px;
+        padding-left: 10px;
+        padding-right: 0px;
       }
     }
     .username {
       h2 {
         color: white;
-        padding-right:10px;
+        padding-right: 10px;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {
