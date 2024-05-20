@@ -78,3 +78,5 @@ io.on("connection", (socket) => {
 
 // for building npm run build /npm build in the client part
 // deployement done but not working
+
+//https://rb.gy/je9jzw -- website link of my website but this is running on my friends mongodb
