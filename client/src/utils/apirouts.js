@@ -1,7 +1,7 @@
 // export const host = "https://chat-app-iam-beside-you-iit-dhanbad.onrender.com";
-// export const host = "http://localhost:5000";
+export const host = "http://localhost:5000";
 // export const host = "https://chattyapp-7e4c.onrender.com";
-export const host = "https://chatty-64gw.onrender.com";
+// export const host = "https://chatty-64gw.onrender.com";
 export const regRoute = `${host}/api/auth/reg`;
 export const loginRoute = `${host}/api/auth/login`;
 export const setAvatarRoute = `${host}/api/auth/setAvatar`;
